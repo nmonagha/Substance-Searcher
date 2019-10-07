@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>Substance Searcher</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="colorlib.com">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <link href="css/main.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/assessment.js"></script>
+  <script type="text/javascript" src="js/component.js"></script>
+  <script type="text/javascript" src="js/component/header.js"></script>
+  <script type="text/javascript" src="js/component/autocomplete.js"></script>
+  <script type="text/javascript" src="js/component/visualization.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+
+  <div class="s01">
+    <form autocomplete="off" action="drugInfo.html">
+      <fieldset>
+        <legend>Substance Searcher</legend>
+      </fieldset>
+      <div class="inner-form">
+        <div class="autocomplete first-wrap">
+          <input id="myInput" type="text" name="drug" placeholder="Search for Active Substances such as Aspirin">
+        </div>
+        <div class="autocomplete third-wrap">
+          <button id=myButton class="btn-search" type="submit">Search</button>
+        </div>
+      </div>
+    </form>
+
+    <script>
+      assessment.ready()
+      // Get the input field
+      var input = document.getElementById("myInput");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("myButton").click();
+  }
+});
+</script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<html>
+<head>
+  <title>Substance Searcher</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="colorlib.com">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <link href="css/main.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/assessment.js"></script>
+  <script type="text/javascript" src="js/component.js"></script>
+  <script type="text/javascript" src="js/component/header.js"></script>
+  <script type="text/javascript" src="js/component/autocomplete.js"></script>
+  <script type="text/javascript" src="js/component/visualization.js"></script>
+  <script type="text/javascript" src="js/component/graph.js"></script>
+  
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+  <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <link rel="shortcut icon" href="images/favicon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  #view-source {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
+  }
+</style>
+</head>
+<body>
+  <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+    <main class="mdl-layout__content">
+      <div class="demo-blog__posts mdl-grid">
+
+        <div class="demo-blog__posts mdl-grid">
+
+          <div id=nameD class="mdl2-card on-the-road-again mdl-cell mdl-cell--12-col">
+          </div>
+        </div>
+
+
+        <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
+          <legend>Age of Patients during Usage of Substance</legend>
+          <div id="chart_Age"></div>
+        </div>
+      </div>
+      <div class="demo-blog__posts mdl-grid">
+
+        <div class="mdl-card on-the-road-again mdl-cell mdl-cell--6-col">
+          <legend>Percentage of Male and Female Patients That Used the Substance</legend>
+          <div id="chart_MF"></div>
+
+        </div>
+        <div class="mdl-card on-the-road-again mdl-cell mdl-cell--6-col">
+          <legend>Result after Usage of Substance</legend>
+          <div id="chart_result"></div>
+
+        </div>
+      </div>
+
+      <div class="demo-blog__posts mdl-grid">
+        <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
+          <legend>Yearly Number of Patients Using the Substance</legend>
+          <div id="chart_date"></div>
+        </div>
+      </div>
+
+      <div class="demo-blog__posts mdl-grid">
+        <div class="mdl-card on-the-road-again mdl-cell mdl-cell--6-col">
+          <legend>Action Taken after Patient Completed Usage of Substance</legend>
+          <div id="chart_action"></div>
+        </div>
+
+        <div class="mdl-card on-the-road-again mdl-cell mdl-cell--6-col">
+          <legend>Most Common Methods for Consumption of Substance</legend>
+          <div id="chart_form"></div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </main>
+
+</div>
+<script >
+  assessment.render_getInfo()
+  assessment.render_getMF()
+  assessment.render_getPatientAge()
+  assessment.render_getResult()
+  assessment.render_getDate()
+  assessment.render_getAction()
+  assessment.render_getForm()
+
+</script>
+
+</body>
+</html>
